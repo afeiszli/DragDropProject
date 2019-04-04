@@ -11,6 +11,10 @@ app.config["UPLOAD_FOLDER"] = "uploads"
 def index():
     return redirect("/static/index.html")
 
+@app.route("/hello")
+def hello():
+    return jsonify(message="hi there!")
+
 
 @app.route("/sendfile", methods=["POST"])
 def send_file():
