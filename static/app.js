@@ -10,7 +10,7 @@ $(function(){
     };
 
     var fileUploadSuccess = function(data){
-        var url = "/filenames";
+        var url = "drag-n-dop:8080/filenames";
         var promise = $.get(url);
         promise.then(refreshFilenameList);
     };
@@ -29,7 +29,7 @@ $(function(){
         formData.append("file2upload", files[0]);
 
         var req = {
-            url: "/sendfile",
+            url: "drag-n-dop:8080/sendfile",
             method: "post",
             processData: false,
             contentType: false,
