@@ -9,7 +9,7 @@ app.config["UPLOAD_FOLDER"] = "uploads"
 @app.route("/")
 def index():
     #return redirect("/static/index.html")
-    return render_template('static/index-mono.html')
+    return render_template('index-mono.html')
 
 @app.route("/hello")
 def hello():
