@@ -1,7 +1,6 @@
-from flask import Flask, request, redirect, jsonify
+from flask import Flask, request, redirect, jsonify, render_template
 import os
 from werkzeug.utils import secure_filename
-
 
 app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = "uploads"
@@ -9,7 +8,8 @@ app.config["UPLOAD_FOLDER"] = "uploads"
 
 @app.route("/")
 def index():
-    return redirect("/static/index.html")
+    #return redirect("/static/index.html")
+    return render_template('static/index-mono.html')
 
 @app.route("/hello")
 def hello():
